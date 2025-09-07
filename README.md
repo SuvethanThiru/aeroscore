@@ -156,27 +156,3 @@ RAILS_ENV=production bundle exec rails assets:precompile
 # Run database migrations
 RAILS_ENV=production bundle exec rails db:migrate
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Performance Metrics
-
-- Supports 25+ daily user interactions
-- Manages 35+ airline ratings efficiently  
-- Optimized CRUD operations with indexed queries
-- Responsive design loads in under 2 seconds
-- Webpacker optimization reduces bundle size by 40%
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-If you encounter any issues or have questions, please [create an issue](https://github.com/your-username/aeroscore/issues) on GitHub.
