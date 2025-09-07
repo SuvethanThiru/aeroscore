@@ -1,0 +1,42 @@
+# config/webpacker.yml
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_root_path: public
+  public_output_path: packs
+  cache_path: tmp/cache/webpacker
+  webpack_compile_output: true
+  
+  resolved_paths: []
+  cache_manifest: false
+  extract_css: false
+  static_assets_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+    - .gif
+    - .tiff
+    - .ico
+    - .svg
+    - .eot
+    - .otf
+    - .ttf
+    - .woff
+    - .woff2
+
+development:
+  <<: *default
+  compile: true
+  cache_manifest: false
+  extract_css: false
+
+test:
+  <<: *default
+  compile: true
+  public_output_path: packs-test
+
+production:
+  <<: *default
+  compile: false
+  cache_manifest: true
+  extract_css: true

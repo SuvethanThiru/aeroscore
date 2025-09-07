@@ -1,0 +1,26 @@
+# === DATABASE CONFIGURATION ===
+# config/database.yml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: aeroscore_development
+  username: postgres
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
+
+test:
+  <<: *default
+  database: aeroscore_test
+  username: postgres
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
+
+production:
+  <<: *default
+  database: aeroscore_production
+  username: aeroscore
+  password: <%= ENV['DATABASE_PASSWORD'] %>

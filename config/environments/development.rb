@@ -1,0 +1,25 @@
+# config/environments/development.rb
+Rails.application.configure do
+  config.cache_classes = false
+  config.eager_load = false
+  config.consider_all_requests_local = true
+  
+  if Rails.root.join('tmp', 'caching-dev.txt').exist?
+    config.cache_store = :memory_store
+    config.public_file_server.headers = {
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+    }
+  else
+    config.cache_store = :null_store
+  end
+  
+  config.active_storage.variant_processor = :mini_magick
+  config.active_record.migration_error = :page_load
+  config.active_record.verbose_query_logs = true
+  
+  config.assets.quiet = true
+  config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  
+  # Webpacker settings
+  config.webpacker.check_yarn_integrity = false
+end
