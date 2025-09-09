@@ -169,7 +169,7 @@ GEM
     pg (1.6.2-x86_64-linux-musl)
     psych (5.1.2)
       stringio
-    puma (6.6.1)
+    puma (7.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.1)
@@ -313,7 +313,7 @@ DEPENDENCIES
   listen (~> 3.3)
   ostruct
   pg (~> 1.1)
-  puma (~> 6.4)
+  puma (~> 7.0)
   rack-cors (~> 2.0)
   rails (~> 8.0.0)
   rspec-rails
